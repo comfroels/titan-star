@@ -1,0 +1,24 @@
+.TitleBar {
+  display: flex;
+  justify-content: center;
+}
+
+.TitleBar-header {
+  padding: 8px 16px;
+  width: 60%;
+  text-align: center;
+  color: white;
+  background-color: #171b1c;
+  margin: 8px 16px;
+}
+
+.TitleBar-wizard {
+  width: 18px;
+  height: auto;
+  margin-left: 24px;
+  &:hover {
+    display: inline-block;
+    opacity: 1 !important;
+    cursor: pointer;
+  }
+}

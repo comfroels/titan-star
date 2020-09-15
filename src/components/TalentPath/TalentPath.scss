@@ -1,0 +1,23 @@
+.TalentPath {
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.TalentPath-title {
+  color: #abaeaf;
+  padding: 8px;
+  margin-right: 24px;
+  text-transform: uppercase;
+}
+
+.TalentPath-segment {
+  height: 10px;
+  border: 2px solid #1e2223;
+  width: 100%;
+  background-color: #1a1e1f;
+  &.is--highlighted {
+    border-color: #414244;
+    background-color: #313234;
+  }
+}

@@ -1,0 +1,68 @@
+.Rune {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #4e4e4e 0px,
+    #4e4e4e 50%,
+    #393939 50%,
+    #4e4e4e 100%
+  );
+  padding: 3px;
+  &.is--selected {
+    background: linear-gradient(
+      to bottom,
+      #6eabe9 0px,
+      #6eabe9 50%,
+      #263a4f 50%,
+      #6eabe9 100%
+    );
+    box-shadow: 0px 0px 2px 2px rgba(109, 163, 220, 0.5);
+  }
+  &:hover {
+    box-shadow: 0px 0px 2px 2px rgba(109, 163, 220, 0.5);
+  }
+}
+
+.Rune-icon {
+  height: 50px;
+  width: 50px;
+  &:hover {
+    cursor: pointer;
+    &.is--easterEgged {
+      animation: linear party-wizard 1s infinite;
+    }
+  }
+}
+
+$icons: chevron, skull, lightning, snorkle, boat, crown, cake, dining;
+
+@for $i from 1 through length($icons) {
+  $icon: nth($icons, $i);
+  @debug $icon;
+  @debug (($i - 1) * 50px);
+
+  .Rune-icon-#{$icon} {
+    background: url('./talent-icons-sprite.png') (($i - 1) * 50px) 50px;
+    &.is--selected {
+      background: url('./talent-icons-sprite.png') (($i - 1) * 50px) 0px;
+    }
+  }
+}
+
+.Rune-icon-chevron {
+  background: url('./talent-icons-sprite.png') 0px 50px;
+  &.is--selected {
+    background: url('./talent-icons-sprite.png') 0px 0px;
+  }
+}
+
+// I know this is stolen, it's my nod to your creativity
+@keyframes party-wizard {
+  0% {
+    filter: sepia(1) hue-rotate(-30deg) saturate(600%) contrast(120%);
+  }
+
+  100% {
+    filter: sepia(1) hue-rotate(330deg) saturate(600%) contrast(120%);
+  }
+}

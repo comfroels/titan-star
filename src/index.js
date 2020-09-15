@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { toast } from 'react-toastify';
+
+toast.configure({
+  pauseOnFocusLoss: false,
+  hideProgressBar: true,
+  autoClose: 5000,
+});
 
 ReactDOM.render(
   <React.StrictMode>

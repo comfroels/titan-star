@@ -1,0 +1,29 @@
+.PointsBoard {
+  background-color: #060809;
+  width: 15%;
+  min-width: 100px;
+  padding: 8px;
+  border: 2px solid #121416;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.PointsBoard-score {
+  color: white;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+.PointsBoard-descriptor {
+  color: #374e64;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .PointsBoard {
+    margin-bottom: 32px;
+  }
+}
